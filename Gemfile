@@ -9,6 +9,11 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'devise'
 # Change, add layout-views-bootstrap-devise
 gem 'devise-bootstrap-views'
+# Change, add gem paperclip
+gem 'paperclip', '~> 4.1'
+# Change, pagineto by kaminari
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 # Use SCSS for stylesheets

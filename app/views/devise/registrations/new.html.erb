@@ -1,4 +1,4 @@
-<% provide(:title, "Conta usuário") %>
+<% provide(:title, "Cadastro") %>
 <%= bootstrap_devise_error_messages! %>
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -6,6 +6,16 @@
   </div>
   <div class="panel-body">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>
+      <div class="form-group">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :mat %><br />
+        <%= f.text_field :mat, autofocus: true, class: "form-control" %>
+      </div>
+
       <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
