@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   belongs_to :course
+  belongs_to :admission
 
   def full_name
     if self.name.blank?
