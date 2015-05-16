@@ -31,4 +31,9 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "News | SOA - Sistema de Orientação Acadêmica"
   end
 
+  test "should get account" do
+    devise_for :users
+    assert_response :success
+    assert_select "Conta usuário | SOA - Sistema de Orientação Acadêmica"
+  end
 end
