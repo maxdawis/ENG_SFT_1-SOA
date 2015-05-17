@@ -9,7 +9,16 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
-	protected
+
+  protected
+
+  def stored_location_for(resource_or_scope)
+    nil
+  end
+
+  def after_sign_in_path_for(resource_or_scope)
+    user_path(current_user)
+  end
 
 	def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :mat, :email, :password) }

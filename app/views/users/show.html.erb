@@ -11,6 +11,12 @@
         <ul>
             <%= content_tag(:li, ("Nome: " + @user.name)) unless @user.name.blank? %>
         </ul>
+        <ul>
+          <li><%= link_to "Usuários", users_path, class: "btn btn-default" %></li>
+          <li><%= link_to "Institutos", institutes_path, class: "btn btn-default" %></li>
+          <li><%= link_to "Departamentos", departments_path, class: "btn btn-default" %></li>
+          <li><%= link_to "Cursos", courses_path, class: "btn btn-default" %></li>
+        </ul>
     </div>
     <div class="feed">
         <h3>Social Feed Coming</h3>
